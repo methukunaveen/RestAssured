@@ -23,13 +23,13 @@ public class Getandpost {
 		given().
 		
 		get("/users?page=2").
-		//status code
+		
 		then().
 		statusCode(200).
 		body("data[4].first_name", equalTo("George")).log().all().
 		body("data.first_name",hasItems("George","Rachel"));
 		
-			
+		System.out.println("hello");	
 		
 	}
 	@Test
